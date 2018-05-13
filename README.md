@@ -8,7 +8,7 @@ A simple, self-hosted Discord bot providing information from StockX about the cu
 
 ## Prerequisites
 
-* [Python 3](https://www.python.org/downloads/) ([discord.py](https://github.com/Rapptz/discord.py), [Requests](https://github.com/requests/requests))
+* [Python 3](https://www.python.org/downloads/) ([Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/), [discord.py](https://github.com/Rapptz/discord.py), [Requests](https://github.com/requests/requests))
 
 ## Installation and Setup
 
@@ -27,12 +27,14 @@ Follow [this tutorial](https://discordpy.readthedocs.io/en/rewrite/discord.html)
 
 ## Built With
 
+* [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) - A Python library designed for quick turnaround projects like screen-scraping.
 * [discord.py](https://github.com/Rapptz/discord.py) - An API wrapper for Discord written in Python.
 * [Requests](https://github.com/requests/requests) - Python HTTP Requests for Humans™.
 
 ## Authors
 
 * **71Oliver** - [GitHub](https://github.com/71Oliver)
+* **Yousef Issa** - [GitHub](https://github.com/yousefissa)
 
 ## License
 
