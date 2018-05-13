@@ -63,18 +63,25 @@ async def on_message(message):
             retail_price = output['hits'][0]['searchable_traits']['Retail Price']
         except KeyError:
             pass
+        except IndexError:
+            await client.send_message(message.channel, 'Error fetching data from the API. Please try another product.')
+            raise
 
         r = requests.get(url=product_url)
         soup = BeautifulSoup(r.text, 'html.parser')
 
+        last_sale_size = ''
+        lowest_ask_size = ''
+        highest_bid_size = ''
         try:
-            last_sale_size = soup.find('div', {'class': 'last-sale-block'}).find('span', {'class':'bid-ask-sizes'}).text
-            lowest_ask_size = soup.find('div', {'class': 'bid bid-button-b'}).find('span', {'class':'bid-ask-sizes'}).text
-            highest_bid_size = soup.find('div', {'class': 'ask ask-button-b'}).find('span', {'class':'bid-ask-sizes'}).text
+            last_sale_size = soup.find('div', {'class': 'last-sale-block'}).find(
+                'span', {'class':'bid-ask-sizes'}).text
+            lowest_ask_size = soup.find('div', {'class': 'bid bid-button-b'}).find(
+                'span', {'class':'bid-ask-sizes'}).text
+            highest_bid_size = soup.find('div', {'class': 'ask ask-button-b'}).find(
+                'span', {'class':'bid-ask-sizes'}).text
         except AttributeError:
-            last_sale_size = ''
-            lowest_ask_size = ''
-            highest_bid_size = ''
+            pass
 
         embed = discord.Embed(color=4500277)
         embed.set_thumbnail(url=thumbnail_url)
@@ -90,5 +97,5 @@ async def on_message(message):
 
         await client.send_message(message.channel, embed=embed)
 
-
-client.run(discord_token)
+if __name__ == '__main__':
+    client.run(discord_token)
