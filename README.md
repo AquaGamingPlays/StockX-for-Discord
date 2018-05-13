@@ -1,10 +1,10 @@
 # StockX for Discord
 
-A simple, self-hosted Discord bot providing information from GOAT and StockX about the current value of sneakers.
+A simple, self-hosted Discord bot providing information from StockX about the current value of sneakers.
 
 ## Example
 
-![Imgur](https://i.imgur.com/xZmz8lz.png)
+![Imgur]()
 
 ## Prerequisites
 
@@ -17,12 +17,11 @@ git clone https://github.com/71Oliver/StockX-for-Discord
 python main.py
 ```
 
-Follow [this tutorial](https://discordpy.readthedocs.io/en/rewrite/discord.html) to create a bot account. Input your token into `config.py`.
+Follow [this tutorial](https://discordpy.readthedocs.io/en/rewrite/discord.html) to create a bot account. Input your token into `config.json`.
 
 ## Commands
 
 ```
-!goat SNEAKERNAME
 !stockx SNEAKERNAME
 ```
 
