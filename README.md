@@ -4,7 +4,7 @@ A simple, self-hosted Discord bot providing information from StockX about the cu
 
 ## Example
 
-![Imgur]()
+![Imgur](https://imgur.com/a/TBrRRvc)
 
 ## Prerequisites
 
